@@ -3,42 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Tip calculator app</title>
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <header>
+    <div class="logo-container">
+      <h1>Splitter</h1>
+    </div>
+  </header>
+  <main>
+    <div class="splitter-container">
+      <div class="calculator-container">
+        <form action="#">
+          <section class="bill">
+            <fieldset>
+              <legend>Bill Amount</legend>
+              <input type="text" name="bill" id="bill">
+              <label for="bill">Bill</label>
+            </fieldset>
+            <fieldset>
+              <legend>Tip Amount</legend>
+              <p>Select Tip%</p>
+              <ul>
+                <li>
+                  <label for="5%">
+                    <input type="radio" id="5%" name="tip">
+                    5%
+                  </label>
+                </li>
+                <li>
+                  <label for="10%">
+                    <input type="radio" id="10%" name="tip">
+                    10%
+                  </label>
+                </li>
+                <li>
+                  <label for="15%">
+                    <input type="radio" id="15%" name="tip">
+                    15%
+                  </label>
+                </li>
+                <li>
+                  <label for="25%">
+                    <input type="radio" id="25%" name="tip">
+                    25%
+                  </label>
+                </li>
+                <li>
+                  <label for="50%">
+                    <input type="radio" id="50%" name="tip">
+                    50%
+                  </label>
+                </li>
+                <li>
+                  <label for="other">
+                    <input type="radio" id="other" name ="tip">
+                  </label>
+                  <label for="custom">
+                    <input type="text" id="custom" name="tip-amount" placeholder="Custom">
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </section>
+          <section class="people">
+            <fieldset>
+              <legend>Number of People</legend>
+              <label for="num-of-people">
+                Number of People
+                <input type="text" for="num-of-people" id="num-of-people">
+              </label>
+            </fieldset>
+          </section>
+        </form>
+      </div>
+      <div class="display-container">
+        <div class="tip-amount-container">
+          <div class="tip-label-container">
+            <p>Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <div class="amount-container">
+            <p>$0.00</p>
+          </div>
+        </div>
+        <div class="total-amount-container">
+          <div class="total-label-container">
+            <p>Total</p>
+            <p>/ person</p>
+          </div>
+          <div class="amount-container">
+            <p>$0.00</p>
+          </div>
+        </div>
+        <button>Reset</button>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
